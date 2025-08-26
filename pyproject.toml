@@ -6,7 +6,7 @@ authors = [{ name = "Chris Towles", email = "chris.towles.dev01@gmail.com" }]
 readme = "README.md"
 requires-python = ">=3.13,<4.0"
 dependencies = [
-    "towles-tool",
+    "dad-jokes-mcp",
 ]
 
 [dependency-groups]
@@ -38,7 +38,7 @@ packages = ["packages"]
 members = ["packages/*"]
 
 [tool.uv.sources]
-towles-tool = { workspace = true }
+dad-jokes-mcp = { workspace = true }
 
 [tool.mypy]
 files = ["packages/*/src"]
@@ -95,7 +95,7 @@ ignore = [
     # LineTooLong
     "E501",
     # DoNotAssignLambda
-    "E731",
+    "E731"
 ]
 
 [tool.ruff.lint.per-file-ignores]
@@ -110,3 +110,6 @@ skip_empty = true
 [tool.coverage.run]
 branch = true
 source = ["packages/*/src"]
+
+[tool.pylint.messages_control]
+disable = ["C0116"]  # missing-function-docstring

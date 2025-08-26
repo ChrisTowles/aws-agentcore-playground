@@ -22,3 +22,8 @@ Now in VSCode you can run `Python: select interpreter` and chose the `.venv` fol
 
 uv sync
 ```
+
+
+### Pre-commit hooks
+
+Run manually: `uv run pre-commit run --all-files`
